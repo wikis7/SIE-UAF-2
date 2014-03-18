@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SIE_UAF_2 {
+namespace SIE_UAF_2.ServEsc {
     
     
-    public partial class _Default {
+    public partial class WebForm1 {
     }
 }

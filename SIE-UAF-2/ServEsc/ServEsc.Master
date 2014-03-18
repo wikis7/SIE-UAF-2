@@ -1,5 +1,4 @@
-ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SIE_UAF_2.SiteMaster" %>
-
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ServEsc.master.cs" Inherits="SIE_UAF.ServEsc.ServEsc" %>
 <!DOCTYPE html>
 
 <html lang="es">
@@ -7,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html" charset="iso-8859-1"/>
     <meta charset="iso-8859-1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Sistema de IntegraciÃ³n Escolar</title>
+    <title><%: Page.Title %> - Servicios Escolares - SIE</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -17,7 +16,7 @@
     <script language=JavaScript> 
             <!--
     function inhabilitar() {
-        alert("Esta funciÃ³n estÃ¡ inhabilitada.\nDisculpen las molestias.")
+        alert("Esta función está inhabilitada.\nDisculpen las molestias.")
         return false
     }
     document.oncontextmenu = inhabilitar
@@ -55,27 +54,30 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Sistema de IntegraciÃ³n Escolar</a>
+                    <a class="navbar-brand" runat="server" href="~/">Sistema de Integración Escolar</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/ServEsc/InicioServEsc.aspx">Servicios Escolares</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a>
-                        </li>
+                        <li><a runat="server" href="Carreras.aspx">Carreras</a></li>
+                        <li><a runat="server" href="Materias.aspx">Materias</a></li>
+                        <li><a runat="server" href="#">Alumnos</a></li>
+                        <li><a runat="server" href="#">Docentes</a></li>
+                        <li><a runat="server" href="#">Servicios</a></li>
+                        <li><a runat="server" href="#">Kardex</a></li>
+                        <li><a runat="server" href="#">Promedios</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <%--<li><a runat="server" href="~/Account/Register">Registrarse</a></li>--%>
-                                <li><a runat="server" href="~/Account/Login">Iniciar sesiÃ³n</a></li>
+                                <li><a runat="server" href="~/Account/Login">Iniciar sesión</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesiÃ³n" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    <%--<asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />--%>
                                 </li>
                             </ul>
                         </LoggedInTemplate>
@@ -88,7 +90,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Sistema de IntegraciÃ³n Escolar - Universidad AutÃ³noma de Fresnillo</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Sistema de Integración Escolar - Universidad Autónoma de Fresnillo</p>
             </footer>
         </div>
     </form>

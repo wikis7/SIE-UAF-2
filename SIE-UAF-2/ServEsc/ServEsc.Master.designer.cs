@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SIE_UAF_2 {
+namespace SIE_UAF.ServEsc {
     
     
-    public partial class SiteMaster {
+    public partial class ServEsc {
         
         /// <summary>
         /// Control MainContent.
